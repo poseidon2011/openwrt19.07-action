@@ -24,7 +24,8 @@ on:
 env:
   #REPO_URL: https://github.com/coolsnowwolf/lede
   #REPO_BRANCH: master
-  BACKUP_URL: https://github.com/poseidon2011/passwall-backup.git
+  BACKUP_BRANCH: master
+  BACKUP_URL: https://github.com/poseidon2011/passwall-backup
   REPO_URL: https://github.com/Lienol/openwrt
   REPO_BRANCH: dev-19.07
   CONFIG_FILE: newifi3.config
@@ -71,7 +72,7 @@ jobs:
       run: git clone $REPO_URL -b $REPO_BRANCH openwrt
 
     - name: Clone backup code
-      run: cd openwrt/package && git clone $BACKUP_URL
+      run: git clone $BACKUP_URL -b $BACKUP_BRANCH ./openwrt/package/passwall-backup
 
     - name: clean feeds
       run: cd openwrt && ./scripts/feeds clean
