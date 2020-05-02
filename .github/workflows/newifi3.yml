@@ -24,7 +24,7 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  BACKUP_URL: https://github.com/poseidon2011/Lienol-openwrt-packages-backup.git
+  BACKUP_URL: https://github.com/poseidon2011/passwall-backup.git
   #REPO_URL: https://github.com/Lienol/openwrt
   #REPO_BRANCH: dev-19.07
   CONFIG_FILE: newifi3.config
